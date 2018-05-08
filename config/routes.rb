@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   as :user do
-    # devise is the controller
     get "signin" => 'devise/sessions#new'
     delete "signout" => 'devise/sessions#destroy'
     get "signup" => 'devise/registrations#new'
